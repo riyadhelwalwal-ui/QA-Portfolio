@@ -1,15 +1,14 @@
-# 1. Hausaufgabe: Anforderungen & Feature-Analyse
+# 1. Hausaufgabe: Anforderungen & Feature-Analyse (MarketMate)
 
 ## **Bestehende Funktionalitäten (MarketMate)**
 - Registrierungs- und Login-Funktionalität
-- Produktsuche mit Sortierfunktion (z. B. nach Preis) und Kategorisierung von Produkten
-- Produkte zu Favoriten hinzufügen
-- Produkte in den Warenkorb legen
-- Bestellabschluss (Checkout): Eingabe von Rechnungs- und Versandinformationen, Auswahl der Zahlungsmethode, Preisberechnung (Gesamtsumme)
+- Produktsuche mit Sortierfunktion und Kategorisierung von Produkten
+- Produkte zu Favoriten hinzufügen und in den Warenkorb legen
+- Bestellabschluss (Checkout)
 
 ---
 
-## **Neue Features (Analyse nach Beispiel-Vorlage)**
+## **Neue Features**
 
 ### **1. Bewertungssystem für Produkte**
 
@@ -17,13 +16,12 @@
 - Nutzer sollen Produkte mit einem 5-Sterne-System bewerten und zusätzlich schriftliches Feedback hinterlassen können.
 
 **Fragen**:
-1. Müssen sowohl die Sternebewertung als auch das schriftliche Feedback zwingend ausgefüllt werden, oder kann eine Bewertung auch ohne Text abgegeben werden?
-2. Dürfen alle registrierten Nutzer jedes Produkt bewerten, oder ist die Funktion auf verifizierte Käufer (Kunden, die das Produkt tatsächlich bestellt haben) beschränkt?
-3. Gibt es ein Zeichenlimit (Min/Max) für das schriftliche Feedback und wie wird das System gegen Spam oder schädliche Skripte (XSS) geschützt?
-4. Wo genau auf der Produktdetailseite wird das Bewertungssystem und die Summe der bisherigen Bewertungen platziert?
+1. Muss man unbedingt Sterne auswählen, um einen Text zu schreiben, oder geht das auch ohne Sterne?
+2. Darf jeder Besucher eine Bewertung schreiben, oder muss man dafür eingeloggt sein?
+3. Wie viele Zeichen darf der Text maximal haben?
 
 **Detaillierte Anforderung**:
-- Eingeloggte und verifizierte Käufer können auf der Produktdetailseite eine Bewertung abgeben. Das System bietet ein interaktives 5-Sterne-Auswahlfeld (Pflichtfeld) und ein optionales Textfeld für schriftliches Feedback (maximal 500 Zeichen). Das System validiert die Eingabe gegen Spam und schädliche Skripte. Nach dem Absenden wird die Gesamtdurchschnittsnote des Produkts im Katalog live aktualisiert.
+- Eingeloggte Nutzer können auf der Produktseite eine Bewertung abgeben. Die Sterneauswahl ist freiwillig (kein Pflichtfeld). Das Textfeld für den Kommentar erlaubt maximal 500 Zeichen. Nach dem Absenden wird die Gesamtnote live aktualisiert.
 
 ---
 
@@ -33,13 +31,12 @@
 - Alkoholische Produkte erfordern eine Altersverifikation. Beim Aufrufen der Kategorie soll ein Fenster erscheinen, in dem Nutzer ihr Alter angeben müssen (18+), bevor sie Zugriff erhalten.
 
 **Fragen**:
-1. Wie genau soll die Altersverifikation im Fenster erfolgen? (z. B. einfache Bestätigung per Button „Ich bin 18+“ oder durch Eingabe des Geburtsdatums?)
-2. Wie lange bleibt der Verifikationsstatus gültig? Muss der Nutzer sein Alter bei jeder neuen Session bestätigen oder wird dies im Benutzerprofil/Cookie dauerhaft gespeichert?
-3. Was passiert, wenn ein nicht-verifizierter Nutzer versucht, über einen direkten Link (URL-Bypass) auf ein alkoholisches Produkt zuzugreifen?
-4. Welche Fehlermeldung oder Weiterleitung erfolgt, wenn der Nutzer angibt, unter 18 Jahre alt zu sein?
+1. Müssen die Nutzer ihr Geburtsdatum eintippen oder reicht ein einfacher Klick auf einen Button "Ich bin 18"?
+2. Muss man das Alter bei jedem Besuch der Kategorie neu eingeben?
+3. Was passiert, wenn ein Nutzer angibt, dass er unter 18 Jahre alt zu sein?
 
 **Detaillierte Anforderung**:
-- Beim ersten Aufrufen der Kategorie „Alkoholische Getränke“ innerhalb einer active Session öffnet sich ein modales Sperrfenster (Pop-up). Der Nutzer muss sein Geburtsdatum eingeben. Das System prüft, ob der Nutzer mindestens 18 Jahre alt ist. Wenn ja, wird der Zugriff freigeschaltet und der Status in einem Session-Cookie gespeichert. Wenn nein, wird der Zugriff verweigert, eine rote Fehlermeldung angezeigt und der Nutzer auf die Startseite zurückgeleitet. Ein direkter Zugriff per URL wird ohne aktives Cookie blockiert.
+- Wenn ein Nutzer die Kategorie „Alkoholische Getränke“ öffnet, erscheint ein Sperrfenster (Pop-up). Der Nutzer muss sein Geburtsdatum eingeben. Wenn er 18 oder älter ist, öffnet sich die Seite. Wenn er unter 18 ist, zeigt das System eine Fehlermeldung und leitet ihn zurück auf die Startseite.
 
 ---
 
@@ -49,10 +46,9 @@
 - Versandkosten entfallen ab einem bestimmten Bestellwert. Darunter fallen Versandkosten an.
 
 **Fragen**:
-1. Wie hoch ist der exakte Schwellenwert (Bestellwert in Euro), ab dem die Versandkosten entfallen?
-2. Wie hoch sind die Standardversandkosten, wenn der Schwellenwert nicht erreicht wird?
-3. Wird dem Kunden im Warenkorb dynamisch angezeigt, wie viel Euro ihm noch fehlen, um den kostenlosen Versand zu erreichen?
-4. Wie verhält sich das System, wenn durch den Einsatz eines Rabattcodes der Gesamtwert der Bestellung nachträglich unter den Schwellenwert fällt?
+1. Ab wie viel Euro genau ist der Versand kostenlos?
+2. Wie hoch sind die Versandkosten, wenn man diesen Betrag nicht erreicht?
+3. Sieht der Kunde im Warenkorb live, wie viel Geld ihm noch für den kostenlosen Versand fehlt?
 
 **Detaillierte Anforderung**:
-- Ab einem Bruttowarenwert von exakt 50,00 € entfallen die Versandkosten für den Kunden komplett. Liegt der Warenkorbwert darunter, wird eine pauschale Versandgebühr von 4,95 € erhoben. Das System berechnet die Versandkosten im Warenkorb und im Checkout dynamisch in Echtzeit. Im Warenkorb wird dem Nutzer ein Hinweistext angezeigt (z. B. „Noch 12,00 € bis zum kostenlosen Versand“). Wenn ein Rabattcode den Wert unter 50,00 € drückt, werden die Versandkosten automatisch wieder hinzugerechnet.
+- Ab einem Einkaufswert von exakt 50,00 € ist der Versand komplett kostenlos. Wenn der Wert darunter liegt, zahlt der Kunde eine Pauschale von 4,95 €. Der aktuelle Versandpreis wird im Warenkorb immer live angezeigt.
