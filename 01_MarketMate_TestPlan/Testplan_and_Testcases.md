@@ -2,7 +2,7 @@
 # 1. Hausaufgabe: Testplan & Testfallentwurf
 
 ## Testobjekt (System unter Test):
-**Webshop:** https://masterschool.com (MarketMate Homepage & Navigation)
+**Webshop:**[ https://masterschool.com](https://grocerymate.masterschool.com/) (MarketMate Homepage & Navigation)
 
 ---
 
