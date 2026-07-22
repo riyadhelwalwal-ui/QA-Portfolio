@@ -34,5 +34,5 @@
 
 ## **3. Anhang: Nachweise für erfolgreiche Testfälle (PASS-Nachweise)**
 
-### **Nachweis für TF-02 & TF-06 (Erfolgreiches Browsen & Blockade bei fehlendem Kauf):** 
+### **Nachweis für TF-06 (Erfolgreiches Browsen im Shop trotz Underage-Status):**
 <img width="3000" height="4000" alt="1000050622" src="https://github.com/user-attachments/assets/980d7b3a-d807-49be-9488-8f0f3552b35c" />
