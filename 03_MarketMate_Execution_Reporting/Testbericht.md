@@ -3,7 +3,7 @@
 ## **1. Testdurchführungsbericht (Test Execution Log)**
 
 **Testumgebung:**
-- **Schnittstelle:** Web-Applikation (https://masterschool.com)
+- **Schnittstelle:** Web-Applikation ((https://grocerymate.masterschool.com/))
 - **Betriebssystem:** Windows 11 / Google Chrome
 - **Tester:** Riyadh Elwalwal
 - **Datum:** 22. Juli 2026
