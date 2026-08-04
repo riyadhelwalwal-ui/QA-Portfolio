@@ -1,7 +1,6 @@
-# Hausaufgabe: Testdurchführung & Testberichterstattung (MarketMate)
 # 📑 Testbericht: Altersverifikation & Browsing-Logik
 
-## **Testfall-ID: TF-06 (Erfolgreiches Browsen trotz Blockade)**
+## **Testfall: Altersprüfung und Browsing-Logik im Webshop**
 
 ### **1. Genaue Schritte:**
 1. Öffne die MarketMate-Homepage.
@@ -15,14 +14,12 @@ Das System berechnet das Alter korrekt (39 Jahre), schließt das Pop-up und erla
 ### **3. Tatsächliches Ergebnis:**
 Das System berechnet das Alter fälschlicherweise als minderjährig ("You are underage") und sperrt Alkohol, aber es erlaubt korrekt das Durchsuchen und Einkaufen von normalen Produkten (Celery/Ginger).
 
-### **4. Status:** **PASS**
+### **4. Status:** **PASS** (Browsing-Logik erfolgreich verifiziert)
 
 ---
 
 ## **2. Anhang: Nachweis (Visual Evidence)**
 
 
-## **3. Anhang: Nachweise für erfolgreiche Testfälle (PASS-Nachweise)**
 
-### **Nachweis für TF-06 (Erfolgreiches Browsen im Shop trotz Underage-Status):**
 <img width="3000" height="4000" alt="1000050622" src="https://github.com/user-attachments/assets/980d7b3a-d807-49be-9488-8f0f3552b35c" />
