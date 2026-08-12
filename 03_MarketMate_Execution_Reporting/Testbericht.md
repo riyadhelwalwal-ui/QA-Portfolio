@@ -12,7 +12,7 @@
 Das System berechnet das Alter korrekt (39 Jahre), schließt das Pop-up und erlaubt das fehlerfreie Browsen und Einkaufen von normalen Lebensmitteln.
 
 ### **3. Tatsächliches Ergebnis:**
-Das System berechnet das Alter fälschlicherweise als minderjährig ("You are underage") und sperrt Alkohol, aber es erlaubt korrekt das Durchsuchen und Einkaufen von normalen Produkten (Celery/Ginger).
+Das System berechnet das Alter fälschlicherweise als minderjährig ("You are underage") und sperrt Alkohol, aber es erlaubt korrekt das Durchsuchen und Einkaufen von normalen Produkten .
 
 ### **4. Status:** **PASS** (Browsing-Logik erfolgreich verifiziert)
 
@@ -20,6 +20,11 @@ Das System berechnet das Alter fälschlicherweise als minderjährig ("You are un
 
 ## **2. Anhang: Nachweis (Visual Evidence)**
 
+**1. Eingabe der Testdaten (Vorher):**
 
+<img width="4000" height="3000" alt="1000052677" src="https://github.com/user-attachments/assets/468e4c69-8f89-40b5-8307-959aafcaa00e" />
+
+
+**2. System-Reaktion und Fehlermeldung (Nachher):
 
 <img width="3000" height="4000" alt="1000050622" src="https://github.com/user-attachments/assets/980d7b3a-d807-49be-9488-8f0f3552b35c" />
