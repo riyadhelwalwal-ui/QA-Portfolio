@@ -1,20 +1,21 @@
-# 📑 Testbericht: Altersverifikation & Browsing-Logik
+# 📑 Testbericht: Altersverifikation - Testfall 1 (Fehlerhafte Altersberechnung)
 
-## **Testfall: Altersprüfung und Browsing-Logik im Webshop**
+### 🔗 Testfall-ID: MM-AV-01 (Fehlerhafte Altersberechnung für Geburtsjahr 1987)
 
-### **1. Genaue Schritte:**
-1. Öffne die MarketMate-Homepage.
-2. Klicke auf den Button "Shop".
-3. Gib das Geburtsdatum "01.05.1987" im Pop-up ein und klicke auf "Bestätigen".
-4. Navigiere zu normalen Produkten (Celery / Ginger) und füge sie in den Warenkorb hinzu.
+#### 🔗 1. Genaue Schritte (Ausführungsschritte):
+1. Öffnen Sie die MarketMate-Homepage und klicken Sie auf die Schaltfläche „Shop“.
+2. Das Pop-up-Fenster zur Altersverifikation erscheint auf der Benutzeroberfläche.
+3. Geben Sie das Geburtsdatum „01.05.1987“ ein und klicken Sie auf „Bestätigen“.
+4. Versuchen Sie, die Kategorie „Alkoholische Getränke“ zu öffnen.
+5. Navigieren Sie zu normalen Produkten (z. B. Celery / Ginger) und legen Sie diese in den Warenkorb.
 
-### **2. Erwartetes Ergebnis:**
-Das System berechnet das Alter korrekt (39 Jahre), schließt das Pop-up und erlaubt das fehlerfreie Browsen und Einkaufen von normalen Lebensmitteln.
+#### 🔗 2. Erwartetes Ergebnis (Soll-Verhalten):
+Das System muss das Alter korrekt als über 18 Jahre berechnen. Das Pop-up-Fenster sollte sich schließen, der Zugriff auf alle Kategorien (einschließlich Alkohol) muss freigegeben werden und es darf keine Fehlermeldung erscheinen.
 
-### **3. Tatsächliches Ergebnis:**
-Das System berechnet das Alter fälschlicherweise als minderjährig ("You are underage") und sperrt Alkohol, aber es erlaubt korrekt das Durchsuchen und Einkaufen von normalen Produkten .
+#### 🔗 3. Tatsächliches Ergebnis (Ist-Verhalten):
+**[BUG GEFUNDEN]:** Das System berechnet das Alter fälschlicherweise als minderjährig und zeigt die UI-Fehlermeldung `"You are underage"` an. Der Zugriff auf die Alkohol-Kategorie bleibt gesperrt. Das Durchsuchen und Einkaufen von normalen Produkten (Celery/Ginger) wird jedoch trotz der Fehlermeldung fälschlicherweise erlaubt.
 
-### **4. Status:** **PASS** (Browsing-Logik erfolgreich verifiziert)
+#### 🔗 4. Status: FAIL 🔴 (Fehler in der Altersberechnungs-Logik dokumentiert)
 
 ---
 
@@ -27,4 +28,5 @@ Das System berechnet das Alter fälschlicherweise als minderjährig ("You are un
 
 **2. System-Reaktion und Fehlermeldung (Nachher):
 
-<img width="3000" height="4000" alt="1000050622" src="https://github.com/user-attachments/assets/980d7b3a-d807-49be-9488-8f0f3552b35c" />
+<img width="4000" height="3000" alt="1000052678" src="https://github.com/user-attachments/assets/9ac17abe-0e1b-4b69-bd0b-141841da36c2" />
+
