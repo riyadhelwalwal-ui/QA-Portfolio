@@ -18,6 +18,12 @@ Das System zeigt die Fehlermeldung `"You are underage"` korrekt an. Der Zugriff 
 #### 🔗 4. Status: PASS 🟢 (Erwartetes Verhalten für minderjährige Benutzer erfolgreich verifiziert)
 
 #### 🔗 5. Anhang: Nachweis (Visueller Beleg)
+
+**1. Eingabe der Testdaten (Vorher):** 
+<img width="4000" height="3000" alt="1000052681" src="https://github.com/user-attachments/assets/332c9f9d-c060-4836-a411-7f08c317a4f5" />
+
+
+**2. System-Reaktion und Fehlermeldung (Nachher):
 <img width="4000" height="3000" alt="1000052678" src="https://github.com/user-attachments/assets/bcbf083b-fb19-47b7-a641-d01bc4197c64" />
 
 
