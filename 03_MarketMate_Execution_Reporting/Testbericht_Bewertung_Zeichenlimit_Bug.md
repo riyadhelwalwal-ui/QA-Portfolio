@@ -5,7 +5,7 @@
 #### 🔗 1. Genaue Schritte zur Reproduktion des Fehlers (Schritt-für-Schritt):
 1. Öffnen Sie die GroceryMate Webshop-Schnittstelle im Browser Chrome.
 2. Navigieren Sie zur Produktseite von "Oranges" und scrollen Sie nach unten zum Bereich des Bewertungssystems.
-3. Analysieren Sie die bestehende Nutzerbewertung des Benutzers `mimoeksh_3` bezüglich der Textlänge.
+3. Analysieren Sie die bestehende Nutzerbewertung des Benutzers `abhisakh_3` bezüglich der Textlänge.
 
 #### 🔗 2. Erwartetes Ergebnis (Soll-Verhalten laut Spezifikation):
 Das System darf Textfeedbacks mit einer Länge von **maximal 500 Zeichen** akzeptieren. Jede Eingabe, die diesen Grenzwert überschreitet, muss vom System blockiert oder abgeschnitten werden.
