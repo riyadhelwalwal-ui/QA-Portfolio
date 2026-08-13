@@ -1,6 +1,6 @@
 # 📑 Testbericht: Bewertungssystem - Testfall 8 (Grenzwertüberschreitung Textfeedback)
 
-### 🔗 Testfall-ID: MM-BW-02 (Kritischer Validierungsfehler beim Zeichenlimit des Feedbacks)
+### 🔗 Testfall-ID: MM-BW-02 (Fehler beim Zeichenlimit des Feedbacks)
 
 #### 🔗 1. Genaue Schritte zur Reproduktion des Fehlers (Schritt-für-Schritt):
 1. Öffnen Sie die GroceryMate Webshop-Schnittstelle im Browser Chrome.
@@ -8,12 +8,13 @@
 3. Analysieren Sie die bestehende Nutzerbewertung des Benutzers `abhisakh_3` bezüglich der Textlänge.
 
 #### 🔗 2. Erwartetes Ergebnis (Soll-Verhalten laut Spezifikation):
-Das System darf Textfeedbacks mit einer Länge von **maximal 500 Zeichen** akzeptieren. Jede Eingabe, die diesen Grenzwert überschreitet, muss vom System blockiert oder abgeschnitten werden.
+Das System darf Textfeedbacks mit einer Länge von **maximal 500 Zeichen** akzeptieren. Jede Eingabe, die diesen Grenzwert überschreitet, muss blockiert werden.
 
-#### 🔗 3. Tatsächliches Ergebnis (Ist-Verhalten / Fehlverhalten):
-**[KRITISCHER VALIDIERUNGS-BUG GEFUNDEN]:** Das System besitzt keine clientseitige oder serverseitige Validierung der Textlänge. Der Benutzer `mimoeksh_3` konnte ein Textfeedback mit mehreren tausend Zeichen erfolgreich absenden und auf der UI veröffentlichen, was das gesamte Seitenlayout zerstört.
+#### 🔗 3. Tatsächliches Ergebnis (Ist-Verhalten):
+**[FEHLER IM SYSTEM GEFUNDEN]:** Das System hat das Zeichenlimit von maximal 500 Zeichen ignoriert. Der Benutzer `abhisakh_3` konnte einen Text mit mehreren tausend Zeichen erfolgreich absenden, was das Layout der Webseite komplett verzerrt.
 
-#### 🔗 4. Status: FAIL 🔴 (Kritischer Fehler bei Grenzwertvalidierung dokumentiert)
+#### 🔗 4. Status: FAIL 🔴 (Fehler bei Grenzwertvalidierung dokumentiert)
+
 
 #### 🔗 5. Anhang: Nachweis (Visueller Beleg)
 
