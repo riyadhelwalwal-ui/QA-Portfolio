@@ -20,9 +20,9 @@ Das System zeigt die Versandkosten korrekt als **0 €** an. Bei einem Warenwert
 #### 🔗 5. Anhang: Nachweis (Visueller Beleg)
 
 **1. Offizielle Anforderung laut Spezifikation (Vorher):**
-<!-- <img width="1467" height="213" alt="Bildschirmfoto_13-8-2026_2297_github com" src="https://github.com/user-attachments/assets/cdb25f54-81fa-440e-8ec3-f42959eaacfb" />
--->
+ <img width="1467" height="213" alt="Bildschirmfoto_13-8-2026_2297_github com" src="https://github.com/user-attachments/assets/cdb25f54-81fa-440e-8ec3-f42959eaacfb" />
+
 
 **2. Erfolgreicher kostenloser Versand bei über 50,00 € (Nachher):**
-<!--     <img width="3000" height="4000" alt="1000052685" src="https://github.com/user-attachments/assets/7473791b-6879-4e1f-9867-f5869b307e35" />
- -->
+    <img width="3000" height="4000" alt="1000052685" src="https://github.com/user-attachments/assets/7473791b-6879-4e1f-9867-f5869b307e35" />
+
