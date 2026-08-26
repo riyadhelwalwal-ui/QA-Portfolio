@@ -1,7 +1,7 @@
 # utils/constants.py
 
 # --- System-URL (Anforderung 6) ---
-BASE_URL = "https://masterschool.com"
+BASE_URL = "https://grocerymate.masterschool.com/"
 
 # --- Testdaten für erfolgreichen Login (Valid) ---
 VALID_USER = "riyadh_berlin@example.com"
