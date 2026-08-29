@@ -8,7 +8,7 @@
 2. Klicken Sie oben im Header auf das Benutzer-Profil-Symbol (Account Icon).
 3. Geben Sie die E-Mail-Adresse und das Passwort ein und klicken Sie auf „Sign In“.
 4. Klicken Sie auf die Schaltfläche „Shop“, um zu den Produkten zu gelangen.
-5. Geben Sie im nun erscheinenden Pop-up-Fenster zur Altersverifikation das Geburtsdatum „01.05.1987“ ein und klicken Sie auf „Bestätigen“.
+5. Geben Sie im nun erscheinenden Pop-up-Fenster zur Altersverifikation das Geburtsdatum „01.05.1987“ ein und klicken Sie auf „Confirm“.
 6. Versuchen Sie, die Kategorie „Alkoholische Getränke“ zu öffnen, und navigieren Sie zu normalen Produkten (z. B. Celery).
 
 
