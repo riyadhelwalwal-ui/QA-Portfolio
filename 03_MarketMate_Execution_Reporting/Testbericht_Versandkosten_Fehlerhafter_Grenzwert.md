@@ -19,3 +19,6 @@ Da der Einkaufswert von 20,00 € deutlich unter dem gesetzten Spezifikationslim
 **[KRITISCHER LOGIK-BUG GEFUNDEN]:** Das System schaltet ab exakt 20,00 € fälschlicherweise den kostenlosen Versand (0 €) frei. Dies steht im direkten Widerspruch zur detaillierten Anforderung (Gratisversand erst ab 50,00 €). Zudem wird auf der UI der fehlerhafte Text "Free shipment if your purchase is 20€ or more." angezeigt.
 
 #### 🔗 4. Status: FAIL 🔴 (Kritischer Logik- und UI-Spezifikationsfehler dokumentiert)
+
+<img width="862" height="437" alt="Screenshot 2026-08-31 000056" src="https://github.com/user-attachments/assets/2b06340b-2780-4e55-bc2c-83e1ab2a1bb0" />
+
