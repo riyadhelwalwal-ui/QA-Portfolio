@@ -11,7 +11,8 @@
 6. Überprüfen Sie die berechneten Versandkosten auf dem Bildschirm.
 
 #### 🔗 2. Erwartetes Ergebnis (Soll-Verhalten laut Spezifikation):
-Da der Warenwert mit 30.00 € deutlich unter der kostenlosen Grenze von 50.00 € liegt, muss das System zwingend die Versandkostenpauschale von **4.95 €** aufschlagen und auf der UI anzeigen.
+Da der Warenwert mit 30.00 € deutlich unter der kostenlosen Grenze von 50.00 € liegt, muss das System zwingend die Versandkostenpauschale von **4.95 €** aufschlagen und <img width="766" height="403" alt="Screenshot 2026-08-31 230209" src="https://github.com/user-attachments/assets/89b1d693-8781-423b-8eee-9fea5c13fa64" />
+auf der UI anzeigen.
 
 #### 🔗 3. Tatsächliches Ergebnis (Ist-Verhalten im automatisierten Test):
 **[FEHLER IM SYSTEM GEFUNDEN - TEST FAILED 🔴]:** Das automatisierte Testskript hat einen kritischen AssertionError ausgelöst, da die Pauschale von 4.95 € nicht im Seitentext gefunden wurde. Das System berechnet fälschlicherweise 0.00 € Versandkosten bereits ab 20€/30€ Einkaufswert.
