@@ -16,3 +16,4 @@ Das System muss den Zugriff verweigern, den Benutzer auf der Login-Seite halten 
 **[UI-VALIDIERUNG ERFOLGREICH]:** Das System blockiert den unberechtigten Zugriff erfolgreich. Der Benutzer wird nicht eingeloggt und eine entsprechende Fehlermeldung erscheint auf dem Bildschirm.
 
 #### 🔗 4. Status: PASSED 🟢 (Soll- und Ist-Verhalten stimmen exakt überein)
+<img width="909" height="431" alt="Screenshot 2026-08-31 211410" src="https://github.com/user-attachments/assets/d3d957fd-5c18-4fd0-8428-023f768d3a9a" />
