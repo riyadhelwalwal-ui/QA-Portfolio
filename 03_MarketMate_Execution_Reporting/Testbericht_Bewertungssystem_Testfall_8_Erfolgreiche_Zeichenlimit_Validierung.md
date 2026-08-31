@@ -19,3 +19,6 @@ Das System muss die Eingabe im Textfeld bei exakt 500 Zeichen blockieren, den Co
 **[UI-VALIDIERUNG ERFOLGREICH]:** Das System verhält sich spezifikationsgemäß im Frontend. Der Text wird bei exakt 500 Zeichen abgeschnitten. Der rote UI-Counter zeigt "500/500" an und blockiert erfolgreich jeden weiteren Text. Zudem erscheint die korrekte rote Warnmeldung "You cannot tell us more about this product.".
 
 #### 🔗 4. Status: PASSED 🟢 (Soll- und Ist-Verhalten stimmen auf UI-Ebene exakt überein)
+
+<img width="784" height="425" alt="Screenshot 2026-08-31 192320" src="https://github.com/user-attachments/assets/b1588195-c99d-4b99-9b09-cb6cab5f6bb8" />
+
