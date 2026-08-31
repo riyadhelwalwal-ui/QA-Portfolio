@@ -9,15 +9,15 @@ class ShippingPage:
         # --- Element-Lokatoren (Gala Apples & Cart) ---
         self.apples_qty = (By.XPATH, "//div[contains(., 'Gala Apples')]/following-sibling::div//input[@type='number']")
         self.add_to_cart_btn = (By.XPATH, "//div[contains(., 'Gala Apples')]/following-sibling::div//button[contains(text(), 'Add to Cart')]")
-        self.cart_icon = (By.XPATH, "(//div[@class='headerIcon'][3])")
+        self.cart_icon = (By.XPATH, "(//div[@class='headerIcon'])[3]")
 
-    # --- Seiten-Aktionen ---
-    def enter_apples_quantity(self):
+    # --- Seiten-Aktionen (Dynamische Methode fuer 0 oder 5) ---
+    def enter_apples_quantity(self, number_to_add):
         element = WebDriverWait(self.driver, 10).until(
             EC.element_to_be_clickable(self.apples_qty)
         )
         element.click()
-        element.send_keys("0")
+        element.send_keys(str(number_to_add))
 
     def click_add_to_cart(self):
         self.driver.find_element(*self.add_to_cart_btn).click()
