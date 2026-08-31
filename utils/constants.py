@@ -13,3 +13,12 @@ INVALID_PASSWORD = "wrong_password"
 
 # --- Testdaten für Altersverifikation ---
 TEST_AGE_1987 = "01.05.1987"
+
+
+# --- Sensitive Testdaten für Bewertungssystem ---
+FAKE_CARD = "1234567890123456"
+FAKE_CVV = "1234567890"
+
+
+# --- Testdaten für Bewertungssystem (Über 500 Zeichen Bug) ---
+BUG_REVIEW_TEXT = "Das ist ein fehlerhaftes Feedback. " * 20
