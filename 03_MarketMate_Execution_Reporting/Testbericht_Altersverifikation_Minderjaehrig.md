@@ -1,29 +1,18 @@
-# 📑 Testbericht: Altersverifikation - Testfall 2 (Minderjähriger Benutzer)
+📑 Testbericht: Authentifizierung - Testfall 4 (Negativtest mit ungültigen Logindaten)
 
-### 🔗 Testfall-ID: MM-AV-02 (Zugriffsprüfung für minderjährige Benutzer - Geburtsjahr 2012)
+### 🔗 Testfall-ID: MM-AU-02 (Fehlermeldung bei falschem Benutzernamen/Passwort)
 
-#### 🔗 1. Genaue Schritte (Ausführungsschritte):
-1. Öffnen Sie die MarketMate-Homepage und klicken Sie auf die Schaltfläche „Shop“.
-2. Das Pop-up-Fenster zur Altersverifikation erscheint auf der Benutzeroberfläche.
-3. Geben Sie das Geburtsdatum „01.01.2012“ ein und klicken Sie auf „Bestätigen“.
-4. Versuchen Sie, die Kategorie „Alkoholische Getränke“ zu öffnen.
-5. Navigieren Sie zu normalen Produkten (z. B. Schokolade / Snacks) und prüfen Sie die Browsing-Möglichkeit.
+#### 🔗 1. Genaue Schritte zur Reproduktion/Ausführung:
+1. Öffnen Sie die GroceryMate-Webseite.
+2. Klicken Sie auf das Profil-Symbol (Account-Icon) oben rechts, um die Login-Maske zu öffnen.
+3. Geben Sie im Feld "Username" eine ungültige E-Mail-Adresse ein (z.B. riyad_wrong@test.com).
+4. Geben Sie im Feld "Password" ein falsches Passwort ein (z.B. WrongPassword123!).
+5. Klicken Sie auf die Schaltfläche "Login".
 
-#### 🔗 2. Erwartetes Ergebnis (Soll-Verhalten):
-Das System muss das Alter als minderjährig (14 Jahre) erkennen und die Fehlermeldung `"You are underage"` anzeigen. Der Zugriff auf die Kategorie „Alkoholische Getränke“ muss strikt blockiert bleiben. Das Kaufen von normalen Produkten (wie Schokolade) soll jedoch erlaubt sein.
+#### 🔗 2. Erwartetes Ergebnis (Soll-Verhalten laut Spezifikation):
+Das System muss den Zugriff verweigern, den Benutzer auf der Login-Seite halten und eine gut sichtbare rote Fehlermeldung (z.B. "Invalid credentials" oder "Error") auf der Benutzeroberfläche anzeigen.
 
 #### 🔗 3. Tatsächliches Ergebnis (Ist-Verhalten):
-Das System zeigt die Fehlermeldung `"You are underage"` korrekt an. Der Zugriff auf die Kategorie „Alkoholische Getränke“ wird erfolgreich blockiert. Wie erwartet, kann der Benutzer weiterhin im Webshop surfen und normale Produkte (Schokolade/Snacks) ansehen und kaufen.
+**[UI-VALIDIERUNG ERFOLGREICH]:** Das System blockiert den unberechtigten Zugriff erfolgreich. Der Benutzer wird nicht eingeloggt und eine entsprechende Fehlermeldung erscheint auf dem Bildschirm.
 
-#### 🔗 4. Status: PASS 🟢 (Erwartetes Verhalten für minderjährige Benutzer erfolgreich verifiziert)
-
-#### 🔗 5. Anhang: Nachweis (Visueller Beleg)
-
-**1. Eingabe der Testdaten (Vorher):** 
-<img width="4000" height="3000" alt="1000052681" src="https://github.com/user-attachments/assets/332c9f9d-c060-4836-a411-7f08c317a4f5" />
-
-
-**2. System-Reaktion und Fehlermeldung (Nachher):
-<img width="4000" height="3000" alt="1000052678" src="https://github.com/user-attachments/assets/bcbf083b-fb19-47b7-a641-d01bc4197c64" />
-
-
+#### 🔗 4. Status: PASSED 🟢 (Soll- und Ist-Verhalten stimmen exakt überein)
