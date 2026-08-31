@@ -16,3 +16,5 @@ Laut Testplan wird kostenloser Versand erst ab 50€ erwartet. Da das System abe
 **[TEST PASSED 🟢]:** Das automatisierte Testskript hat erfolgreich bestätigt, dass das System den fehlerhaften Text anzeigt und 0€ Versandkosten berechnet. Die fehlerhafte Logikgrenze des Entwicklers wurde auf UI-Ebene erfolgreich per `assert` verifiziert.
 
 #### 🔗 4. Status: PASSED 🟢 (Das automatisierte Skript hat das erwartete Fehler-Verhalten im UI erfolgreich bestätigt)
+<img width="911" height="414" alt="Screenshot 2026-09-01 001740" src="https://github.com/user-attachments/assets/e137fa13-f2e6-4cd5-b100-bd61ec2ba425" />
+<img width="953" height="472" alt="Screenshot 2026-09-01 001004" src="https://github.com/user-attachments/assets/04267d7d-097b-4ba8-89a9-b72c82e2f37a" />
