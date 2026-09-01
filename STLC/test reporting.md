@@ -57,3 +57,29 @@
 ### 🤖 Automatisierter Nachweis (PyTest):
 * **Status:** **PASSED 🟢 (UI-Validierung erfolgreich per Automation verifiziert)**
 
+---
+
+## 🟢 5. Testbericht: Altersverifikation - Testfall 02 (Minderjährigenschutz mit Geburtsjahr 2016)
+
+| Schritt | Action / Testschritt | Erwartetes Ergebnis (Soll) | Tatsächliches Ergebnis (Ist) | Status |
+| :---: | :--- | :--- | :--- | :---: |
+| **1** | GroceryMate-Webseite öffnen & einloggen. | Erfolgreicher Login auf der Plattform. | Login erfolgreich durchgeführt. | **OK** |
+| **2** | Im Pop-up das Geburtsdatum für ein Kind eingeben (2016). | System erkennt die Minderjährigkeit (unter 18). | Datum erfolgreich eingetragen. | **OK** |
+| **3** | Auf die Schaltfläche „Confirm“ klicken. | Zugriff wird verweigert, Fehlermeldung erscheint. | Zugriff blockiert und Fehlermeldung angezeigt. | **OK** |
+
+### 🤖 Automatisierter Nachweis (PyTest):
+* **Status:** **PASSED 🟢 (Minderjährigenschutz erfolgreich per Automation verifiziert)**
+
+---
+
+## 🟢 6. Testbericht: Authentifizierung - Testfall 04 (Negativtest mit ungültigen Logindaten)
+
+| Schritt | Action / Testschritt | Erwartetes Ergebnis (Soll) | Tatsächliches Ergebnis (Ist) | Status |
+| :---: | :--- | :--- | :--- | :---: |
+| **1** | Login-Maske öffnen. | Formular wird auf der UI geladen. | UI erfolgreich geladen. | **OK** |
+| **2** | Falsche E-Mail und falsches Passwort eingeben. | Daten werden im Feld akzeptiert. | Daten erfolgreich eingetragen. | **OK** |
+| **3** | Auf „Login“ klicken. | Zugriff verweigert, rote Fehlermeldung erscheint. | System blockiert Zugriff und zeigt Fehler. | **OK** |
+
+### 🤖 Automatisierter Nachweis (PyTest):
+* **Status:** **PASSED 🟢 (Sicherheitsschranke erfolgreich per Automation verifiziert)**
+
