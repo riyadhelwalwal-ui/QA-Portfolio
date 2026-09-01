@@ -17,7 +17,8 @@ def test_grocerymate_login(browser):
     # 3. Testschritte ausführen (Interaktion via Page Object)
     login_page.enter_username(constants.VALID_USER)
     login_page.enter_password(constants.VALID_PASSWORD)
-    login_page.click_login()#
+    login_page.login_buton()
+
 
     assert login_page.get_text() == "Success"
 

@@ -34,7 +34,8 @@ def test_shipping_free_at_20_euro(browser):
 
     # Schritt 6: Gala Apples auf 10 setzen (20€) und zum Checkout gehen
     shipping_page = ShippingPage(browser)
-    shipping_page.enter_apples_quantity()
+    shipping_page.enter_apples_quantity("0")
+
     time.sleep(1)
     shipping_page.click_add_to_cart()
     time.sleep(2)
@@ -43,5 +44,5 @@ def test_shipping_free_at_20_euro(browser):
     shipping_page.go_to_checkout()
     time.sleep(4)
 
-    # Schritt 7: Verifikation - Ueberpruefen, ob der Logik-Bug existiert
+    # Schritt 7: Verifikation - überprüfen, ob der Logik-Bug existiert
     assert "Free shipment if your purchase is 20€ or more." in browser.page_source

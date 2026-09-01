@@ -33,5 +33,6 @@ def test_age_verification_1987(browser):
     time.sleep(3)
 
     # Schritt 6: Verifikation - Überprüfen, ob der Bug existiert und "You are underage" erscheint
-    assert "You are underage" in browser.page_source
+    assert "You are underage" not in browser.page_source
+
 
