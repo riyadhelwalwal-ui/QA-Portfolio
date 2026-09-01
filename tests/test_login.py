@@ -1,29 +1,24 @@
-# tests/test_login.py
-import time
-
-from selenium.webdriver.common.by import By
-
 from pages.login_page import LoginPage
 from utils import constants
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 def test_grocerymate_login(browser):
-    # 1. Testseiten aufrufen aus den Konstanten (Anforderung 6)
+    # Schritt 1: Homepage oeffnen
+    browser.delete_all_cookies()
     browser.get(constants.BASE_URL)
-    browser.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div[2]/div[2]/div[1]").click()
-    # 2. Page Object Instanziierung (POM)
-    login_page = LoginPage(browser)
 
-    # 3. Testschritte ausführen (Interaktion via Page Object)
+    # Schritt 2: Erfolgreichen Login ausfuehren
+    login_page = LoginPage(browser)
+    login_page.click_profile()
     login_page.enter_username(constants.VALID_USER)
     login_page.enter_password(constants.VALID_PASSWORD)
     login_page.login_buton()
 
+    WebDriverWait(browser, 10).until_not(EC.url_contains("/auth"))
 
-    assert login_page.get_text() == "Success"
 
-    # 4. Eine kleine Pause für die UI-Stabilität
-    time.sleep(2)
+    # Schritt 3: Verifikation -  /auth hat verlassen
 
-    # 5. Erfolgreiche Assertion zur Verifikation (Anforderung 7)
-    assert True
+    assert "/auth" not in browser.current_url
