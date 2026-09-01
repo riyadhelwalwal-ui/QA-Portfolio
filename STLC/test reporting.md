@@ -29,3 +29,31 @@
 * **Status:** **FAILED 🔴 (Bug per Automation dokumentiert)**
 * **Fehlermeldung:** `AssertionError: assert 'You are underage' not in browser.page_source`
 
+
+
+---
+
+## 🟢 3. Testbericht: Altersverifikation - Testfall 02 (Grenzwertprüfung exakt 18 Jahre)
+
+| Schritt | Action / Testschritt | Erwartetes Ergebnis (Soll) | Tatsächliches Ergebnis (Ist) | Status |
+| :---: | :--- | :--- | :--- | :---: |
+| **1** | GroceryMate-Webseite öffnen & einloggen. | Erfolgreicher Login auf der Plattform. | Login erfolgreich durchgeführt. | **OK** |
+| **2** | Im Pop-up das Geburtsdatum für exakt 18 Jahre eingeben (2008). | System speichert das Datum erfolgreich. | Datum erfolgreich im UI eingetragen. | **OK** |
+| **3** | Auf die Schaltfläche „Confirm“ klicken. | Pop-up schließt, Zugriff wird erlaubt. | Pop-up erfolgreich geschlossen. | **OK** |
+
+### 🤖 Automatisierter Nachweis (PyTest):
+* **Status:** **PASSED 🟢 (Grenzwert erfolgreich per Automation verifiziert)**
+
+---
+
+## 🟢 4. Testbericht: Bewertungssystem - Testfall 08 (Grenzwertvalidierung bei 500 Zeichen)
+
+| Schritt | Action / Testschritt | Erwartetes Ergebnis (Soll) | Tatsächliches Ergebnis (Ist) | Status |
+| :---: | :--- | :--- | :--- | :---: |
+| **1** | Detailseite eines Produkts (Gala Apples) öffnen. | Bewertungssystem wird auf der UI geladen. | UI erfolgreich geladen. | **OK** |
+| **2** | Testtext mit exakt 600 Zeichen in das Textfeld einfügen. | System blockiert die Eingabe bei exakt 500 Zeichen. | Text erfolgreich abgeschnitten. | **OK** |
+| **3** | UI-Zeichencounter überprüfen. | Roter Counter zeigt stabil "500/500" an. | Counter zeigt exakt "500/500". | **OK** |
+
+### 🤖 Automatisierter Nachweis (PyTest):
+* **Status:** **PASSED 🟢 (UI-Validierung erfolgreich per Automation verifiziert)**
+
