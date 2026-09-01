@@ -11,6 +11,7 @@ def test_shipping_costs_validation(browser):
     browser.get(constants.BASE_URL)
     time.sleep(2)
 
+
     # Schritt 2: Erfolgreich einloggen
     login_page = LoginPage(browser)
     login_page.click_profile()
