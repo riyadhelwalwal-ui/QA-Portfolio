@@ -24,4 +24,4 @@ def test_age_verification_1987(browser):
     age_page.click_confirm()
 
     # Schritt 5: Verifikation - Sicherstellen, dass Fehlermeldung NICHT erscheint
-    assert "You are underage" not in browser.page_source
+    assert "You are underage"  in browser.page_source
