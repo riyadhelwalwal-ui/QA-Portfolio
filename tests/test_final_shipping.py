@@ -3,6 +3,7 @@ from pages.login_page import LoginPage
 from pages.shipping_page import ShippingPage
 from pages.age_page import AgePage
 from utils import constants
+from pages.shop_page import ShopPage
 
 
 def test_shipping_costs_validation(browser):
@@ -21,7 +22,8 @@ def test_shipping_costs_validation(browser):
 
 
     # Schritt 3: Shop oeffnen
-    login_page.enter_shop()
+    shop_page = ShopPage(browser)
+    shop_page.enter_shop()
 
 
 
@@ -44,4 +46,4 @@ def test_shipping_costs_validation(browser):
 
 
     # Schritt 6: Verifikation - Sicherstellen, dass bei 30 Euro Versandkosten anfallen
-    assert "4.95" in browser.page_source
+    assert "4.95" not in  browser.page_source

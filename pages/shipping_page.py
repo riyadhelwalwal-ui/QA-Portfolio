@@ -13,7 +13,7 @@ class ShippingPage:
         self.apples_qty = (By.XPATH, "//div[contains(., 'Gala Apples')]/following-sibling::div//input[@type='number']")
         self.add_to_cart_btn = (By.XPATH,
                                 "//div[contains(., 'Gala Apples')]/following-sibling::div//button[contains(text(), 'Add to Cart')]")
-        self.cart_icon = (By.XPATH, "(//div[@class='headerIcon'])")
+        self.cart_icon = (By.XPATH, "(//div[@class='headerIcon'][3])")
 
         # --- Lokatoren für das Checkout-Formular und Kauf ---
         self.street_name = (By.XPATH, "//input[@placeholder='Street Address']")
@@ -23,7 +23,7 @@ class ShippingPage:
         self.name_on_card = (By.XPATH, "//input[@placeholder='Name on card']")
         self.expiration = (By.XPATH, "//input[@placeholder='Expiration']")
         self.cvv = (By.XPATH, "//input[@placeholder='Cvv']")
-        self.buy_btn = (By.XPATH, "//button[@class='btn buy_now']")
+        self.buy_btn = (By.XPATH, "//button[@class='btn-buy-now']")
 
     # --- Seiten-Aktionen ---
     def enter_apples_quantity(self, number_to_add):

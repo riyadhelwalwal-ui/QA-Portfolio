@@ -4,7 +4,7 @@ from pages.login_page import LoginPage
 from pages.age_page import AgePage
 from pages.shipping_page import ShippingPage
 from utils import constants
-
+from pages.shop_page import ShopPage
 
 def test_shipping_free_at_20_euro(browser):
     # Schritt 1: Cookies loeschen für eine saubere Testumgebung
@@ -24,7 +24,8 @@ def test_shipping_free_at_20_euro(browser):
     WebDriverWait(browser, 15).until_not(EC.url_contains("/auth"))
 
     # Schritt 4: Auf die Shop-Schaltflaeche klicken
-    login_page.enter_shop()
+    shop_page = ShopPage(browser)
+    shop_page.enter_shop()
 
     # Schritt 5: Altersverifikation ausfuellen
     age_page = AgePage(browser)

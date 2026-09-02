@@ -3,6 +3,7 @@ from pages.age_page import AgePage
 from pages.shipping_page import ShippingPage
 from pages.review_page import ReviewPage
 from utils import constants
+from pages.shop_page import ShopPage
 
 def test_review_character_limit_bug(browser):
     # Schritt 1: Cookies löschen und Homepage öffnen
@@ -17,7 +18,8 @@ def test_review_character_limit_bug(browser):
     login_page.login_buton()
 
     # Schritt 3: Shop öffnen und Altersverifikation ausfüllen
-    login_page.enter_shop()
+    shop_page = ShopPage(browser)
+    shop_page.enter_shop()
     age_page = AgePage(browser)
     age_page.enter_birthdate(constants.TEST_AGE_1987)
     age_page.click_confirm()
@@ -34,7 +36,7 @@ def test_review_character_limit_bug(browser):
     browser.refresh()
 
     # Schritt 5b: Shop erneut oeffnen (توا ح يضغط طيران وبدون أي كراش)
-    login_page.enter_shop()
+    shop_page.enter_shop()
 
     # Schritt 5c: Zurueck zur Produktseite von Gala Apples wechseln
     review_page = ReviewPage(browser)
