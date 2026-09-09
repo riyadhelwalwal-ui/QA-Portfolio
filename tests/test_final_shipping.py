@@ -30,20 +30,18 @@ def test_shipping_costs_validation(browser):
     age_page = AgePage(browser)
     age_page.enter_birthdate(constants.TEST_AGE_1987)
     age_page.click_confirm()
-
-
-    # Schritt 4: Zahl 5 eingeben, um 15 Gala Apples zu erhalten (30 Euro)
     shipping_page = ShippingPage(browser)
+
+    # 1. إدخال الكمية "5" بالماكينة الجاهزة للمطور
     shipping_page.enter_apples_quantity("5")
 
-    shipping_page.click_add_to_cart()
+    # 2. قنص زر الـ Add to Cart بالـ XPath المباشر عشان نتفادوا أي حجب
+    add_btn = browser.find_element("xpath",
+                                   "//div[contains(., 'Gala Apples')]/following-sibling::div//button[contains(., 'Add to Cart')]")
+    browser.execute_script("arguments.click();", add_btn)
 
-    browser.refresh()
+    # 3. 🚀 الحل الصَح: اضغط على أيقونة السلة الفوقية (Cart Icon) عشان تفتح صفحة الحسبة
+    shipping_page.click_cart_icon()
 
-
-    # Schritt 5: Zum Checkout wechseln
-    shipping_page.go_to_checkout()
-
-
-    # Schritt 6: Verifikation - Sicherstellen, dass bei 30 Euro Versandkosten anfallen
-    assert "4.95" not in  browser.page_source
+    # 4. الميزان والتأكد من البق تاعت الـ 4.95 يورو
+    assert "4.95" not in browser.page_source

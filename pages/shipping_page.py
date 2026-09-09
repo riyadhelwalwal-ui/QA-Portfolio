@@ -4,15 +4,16 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 class ShippingPage:
-    def __init__(self, driver):
+    def __init__(self, driver: object) -> None:
         self.driver = driver
         # حد أمان مرن وقوي جداً (15 ثانية) موحد للملف بالكامل
         self.wait = WebDriverWait(self.driver, 15)
 
         # --- Element-Lokatoren (Gala Apples & Cart) ---
         self.apples_qty = (By.XPATH, "//div[contains(., 'Gala Apples')]/following-sibling::div//input[@type='number']")
-        self.add_to_cart_btn = (By.XPATH,
-                                "//div[contains(., 'Gala Apples')]/following-sibling::div//button[contains(text(), 'Add to Cart')]")
+
+        self.add_to_cart_btn = (By.XPATH, "//div[contains(., 'Gala Apples')]/following-sibling::div//button[contains(., 'Add to Cart')]")
+
         self.cart_icon = (By.XPATH, "(//div[@class='headerIcon'][3])")
 
         # --- Lokatoren für das Checkout-Formular und Kauf ---

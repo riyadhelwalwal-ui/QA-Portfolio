@@ -19,7 +19,6 @@ def test_shipping_free_at_20_euro(browser):
     login_page.enter_username(constants.VALID_USER)
     login_page.enter_password(constants.VALID_PASSWORD)
     login_page.login_buton()
-
     # Session-Schutz: Wartet bis die URL gewechselt hat
     WebDriverWait(browser, 15).until_not(EC.url_contains("/auth"))
 
